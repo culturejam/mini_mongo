@@ -40,8 +40,8 @@ module MiniMongo
         self.collection.remove("_id" => BSON::ObjectId(id))
       end
 
-      def count
-        self.collection.count
+      def count(opts={})
+        self.collection.count(opts)
       end
 
       def remove_all
